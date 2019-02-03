@@ -97,7 +97,7 @@ class pageCell: UICollectionViewCell {
         topView.translatesAutoresizingMaskIntoConstraints = false
         logo.centerXAnchor.constraint(equalTo: topView.centerXAnchor).isActive = true
         logo.centerYAnchor.constraint(equalTo: topView.centerYAnchor).isActive = true
-//        logo.heightAnchor.constraint(equalTo: topView.heightAnchor, multiplier: 0.9)
+        logo.heightAnchor.constraint(equalTo: topView.heightAnchor, multiplier: 0.5).isActive = true
         logo.widthAnchor.constraint(equalToConstant: 150).isActive = true
         logo.heightAnchor.constraint(equalToConstant: 120).isActive = true
 

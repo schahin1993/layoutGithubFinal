@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         
     }()
     
-    let prevButton : UIButton = {
+     private let prevButton : UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("PREV", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         return button
         
     }()
-    let nextButton : UIButton = {
+    private let nextButton : UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("NEXT", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
@@ -60,6 +60,10 @@ class ViewController: UIViewController {
         return button
         
     }()
+    
+    @objc private func handleNext() {
+        print("vbnkm,")
+    }
     
     private let freeSpaceControll : UIPageControl = {
         let pc = UIPageControl()
@@ -103,7 +107,7 @@ class ViewController: UIViewController {
         topView.translatesAutoresizingMaskIntoConstraints = false
         logo.centerXAnchor.constraint(equalTo: topView.centerXAnchor).isActive = true
         logo.centerYAnchor.constraint(equalTo: topView.centerYAnchor).isActive = true
-        logo.heightAnchor.constraint(equalTo: topView.heightAnchor, multiplier: 0.9)
+        logo.heightAnchor.constraint(equalTo: topView.heightAnchor, multiplier: 0.5).isActive = true
         logo.widthAnchor.constraint(equalToConstant: 150).isActive = true
         logo.heightAnchor.constraint(equalToConstant: 120).isActive = true
         
