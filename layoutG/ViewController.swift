@@ -7,12 +7,16 @@
 //
 
 import UIKit
-import Foundation
+
+
+extension UIColor {
+    static var pink = UIColor(red: 249/255, green: 207/255, blue: 224/255, alpha: 1)
+}
 
 class ViewController: UIViewController {
     
     let logo : UIImageView = {
-        let imgView = UIImageView(image: #imageLiteral(resourceName: "download"))
+        let imgView = UIImageView(image: #imageLiteral(resourceName: "images"))
         imgView.contentMode = .scaleAspectFit
         imgView.translatesAutoresizingMaskIntoConstraints = false
         return imgView
@@ -24,7 +28,7 @@ class ViewController: UIViewController {
         let textView = UITextView()
         let atrebuttext = NSMutableAttributedString(string: "Hallo Lieber Frunde!", attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)])
         
-        atrebuttext.append(NSAttributedString(string: "\n\nhdvkldjfuncinkefohendfvjkhdufhbjkdshwebjfouybjkjksgsfsojkng", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13) , NSAttributedString.Key.foregroundColor: UIColor.gray]))
+        atrebuttext.append(NSAttributedString(string: "\n\nFacebook has more than 2.2 billion monthly active users as of January 2018. Its popularity has led to prominent media coverage for the company", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13) , NSAttributedString.Key.foregroundColor: UIColor.gray]))
         
         textView.attributedText = atrebuttext
         textView.font = UIFont.boldSystemFont(ofSize: 18)
@@ -51,9 +55,7 @@ class ViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("NEXT", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        button.setTitleColor(.gray, for: .normal)
-        let pinkColor = UIColor(red: 230/255, green: 68/255, blue: 133/255, alpha: 1)
-        button.setTitleColor(pinkColor, for: .normal)
+        button.setTitleColor( .red , for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
         
@@ -63,11 +65,13 @@ class ViewController: UIViewController {
         let pc = UIPageControl()
         pc.currentPage = 0
         pc.numberOfPages = 4
-        pc.pageIndicatorTintColor = UIColor(red: 249/255, green: 207/255, blue: 224/255, alpha: 1)
+        pc.pageIndicatorTintColor = .pink
         pc.currentPageIndicatorTintColor = .red
         return pc
     }()
     
+    
+    let dfasgfh = asinf(12)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,8 +109,8 @@ class ViewController: UIViewController {
         logo.heightAnchor.constraint(equalToConstant: 120).isActive = true
         
         txtLbl.topAnchor.constraint(equalTo: topView.bottomAnchor).isActive = true
-        txtLbl.rightAnchor.constraint(equalTo: view.rightAnchor , constant: -50).isActive = true
-        txtLbl.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 50).isActive = true
+        txtLbl.rightAnchor.constraint(equalTo: view.rightAnchor , constant: -30).isActive = true
+        txtLbl.leftAnchor.constraint(equalTo: view.leftAnchor , constant: 30).isActive = true
         
         topView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5).isActive = true
         topView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
