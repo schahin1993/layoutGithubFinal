@@ -71,8 +71,7 @@ class ViewController: UIViewController {
     }()
     
     
-    let dfasgfh = asinf(12)
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBtn()
